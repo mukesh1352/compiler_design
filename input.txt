@@ -1,5 +1,1 @@
-let x = 42;
-print(x);
-if x>0{
-	print("positive");
-}
+How are you world 124 !!! 3fhgn
