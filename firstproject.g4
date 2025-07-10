@@ -1,26 +1,37 @@
-lexer grammar firstproject;
+lexer grammar BasicLexer;
 
 // Keywords
 IF      : 'if' ;
 ELSE    : 'else' ;
-ADD		: '+';
-SUB		: '-';
-MUL		: '*';
-DIV		: '/';
-WHILE	: 'while';
-DO		: 'do';
-FOR		: 'for';
-ID1		: 'id';
-LESS	: '<';
-GREATER : '>';
-LESS_THAN : '<=';
-GREATER_THAN :'>=';
+ADD     : '+';
+SUBTRACT : '-';
+MULTIPLY : '*';
+DIVIDE : '/';
+DO : 'do';
+FOR : 'for';
+WHILE : 'while';
+LESS_THAN : '<';
+GREATER_THAN : '>';
 EQUAL : '=';
-EXClATION : '!';
+SEMICOLON : ';';
+AND : 'AND';
+OR : 'OR';
+NOT : 'NOT';
+TRUE : 'true';
+FALSE : 'false';
+COMMA : ',';
+COLON : ':';
+LBRACKET : '(';
+RBRACKET : ')';
+POINT : '.'; 
+
+// String literals
+STRING : '"' (~["\\] | '\\' .)* '"';
 
 // Identifiers and literals
 ID      : [a-zA-Z_][a-zA-Z0-9_]* ;
-NUMBER  : [0-9]+ ;
+NUMBER  : [0-9]+ ('.' [0-9]+)?;
+
 
 // Whitespace and newlines
 WS      : [ \t\r\n]+ -> skip ;
