@@ -1,4 +1,4 @@
-lexer grammar BasicLexer;
+lexer grammar firstproject;
 
 // Keywords
 IF      : 'if' ;
@@ -24,6 +24,9 @@ COLON : ':';
 LBRACKET : '(';
 RBRACKET : ')';
 POINT : '.'; 
+EXCLAMATION : '!';
+OPEN_BRACKET : '{';
+CLOSED_BRACKET : '}';
 
 // String literals
 STRING : '"' (~["\\] | '\\' .)* '"';
